@@ -1,44 +1,48 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Nav from '../components/Nav.astro'
-import Section from '../components/Section.astro'
-import Card from '../components/Card.astro'
-import ImageStrip from '../components/ImageStrip.astro'
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Section from "../components/Section.astro";
+import Card from "../components/Card.astro";
+import ImageStrip from "../components/ImageStrip.astro";
+import image0 from "../assets/diego-ph-fIq0tET6llw-unsplash.jpg";
+import image1 from "../assets/merakist-CNbRsQj8mHQ-unsplash.jpg";
+import image2 from "../assets/kenny-eliason-I6wCDYW6ij8-unsplash.jpg";
+import image3 from "../assets/stephen-phillips-hostreviews-co-uk-shr_Xn8S8QU-unsplash.jpg";
 ---
 
-<Layout title='Welcome to Astro.'>
+<Layout title="Welcome to Astro.">
     <Nav />
-    <main>
-        <Section bg='https://www.dagusa.com/img/header.jpg'>
-            <div class='max-w-3xl text-center flex-col flex gap-8 text-white'>
-                <h2 class='text-5xl'>
-                    <span class='block'>HEY LOOK, IT'S EVERY</span>
-                    <span class='block'>BOOTSTRAP WEBSITE EVER</span>
+    <main class='pb-10'>
+        <Section bg="https://www.dagusa.com/img/header.jpg">
+            <div class="max-w-3xl text-center flex-col flex gap-8 text-white">
+                <h2 class="text-5xl">
+                    <span class="block">HEY LOOK, IT'S EVERY</span>
+                    <span class="block">BOOTSTRAP WEBSITE EVER</span>
                 </h2>
-                <div class='divider border border-primary-500 w-40 mx-auto'>
+                <div class="divider border border-primary-500 w-40 mx-auto">
                 </div>
-                <p class='text-sm'>
+                <p class="text-sm">
                     Take a look around at the same fucking bootstrap page you've
                     seen ten million times before! Featuring all the same things
                     as those pages!
                 </p>
                 <button
-                    class='bg-primary-500 text-white font-bold w-fit mx-auto py-4 px-8 rounded-full'
+                    class="bg-primary-500 text-white font-bold w-fit mx-auto py-4 px-8 rounded-full"
                     >This button makes the page scroll</button
                 >
             </div>
         </Section>
         <section
-            class='bg-primary-500 min-h-[30vh] flex flex-col justify-center items-center py-[100px]'
+            class="bg-primary-500 min-h-[30vh] flex flex-col justify-center items-center py-[100px]"
         >
-            <div class='max-w-3xl text-center flex-col flex gap-8 text-white'>
-                <h3 class='text-2xl'>
-                    <span class='block'
+            <div class="max-w-3xl text-center flex-col flex gap-8 text-white">
+                <h3 class="text-2xl">
+                    <span class="block"
                         >Want to make an original website yourself?
                     </span>
                 </h3>
-                <div class='divider border border-white w-40 mx-auto'></div>
-                <p class='text-sm'>
+                <div class="divider border border-white w-40 mx-auto"></div>
+                <p class="text-sm">
                     Forget that! Who would ever want to put in all of that
                     effort for a website? Just open up your web browser and type
                     "bootstrap template" into your favorite search engine, like
@@ -48,49 +52,49 @@ import ImageStrip from '../components/ImageStrip.astro'
                     lines, and you're on your way! No one will notice!
                 </p>
                 <button
-                    class='bg-white text-black font-bold w-fit mx-auto py-4 px-8 rounded-full'
+                    class="bg-white text-black font-bold w-fit mx-auto py-4 px-8 rounded-full"
                     >Google That</button
                 >
             </div>
         </section>
         <section
-            class='bg-white color min-h-[30vh] flex flex-col justify-center items-center py-[100px]'
+            class="bg-white color min-h-[30vh] flex flex-col justify-center items-center py-[100px]"
         >
-            <div class='max-w-6xl text-center flex-col flex gap-8 text-black'>
-                <h3 class='text-2xl'>
-                    <span class='block'>Everybody's so creative</span>
+            <div class="max-w-6xl text-center flex-col flex gap-8 text-black">
+                <h3 class="text-2xl">
+                    <span class="block">Everybody's so creative</span>
                 </h3>
-                <div class='divider border border-primary-500 w-40 mx-auto'>
+                <div class="divider border border-primary-500 w-40 mx-auto">
                 </div>
                 <div
-                    class='mt-10 grid grid-cols-2 md:grid-cols-4 auto-cols-max gap-10'
+                    class="mt-10 grid grid-cols-2 md:grid-cols-4 auto-cols-max gap-10"
                 >
                     <Card
-                        title='This Fucking Template'
-                        body='Guaranteed to use the same fucking template that every other bootstrap website uses, downloaded straight from The Web™'
+                        title="This Fucking Template"
+                        body="Guaranteed to use the same fucking template that every other bootstrap website uses, downloaded straight from The Web™"
                     />
                     <Card
-                        title='This Set of Four Icons'
+                        title="This Set of Four Icons"
                         body="Look at this cool set of four icons describing different things about us! We use four, because it's the default."
                     />
                     <Card
-                        title='Lots of effort'
-                        body='We even changed some of the icons! We take the extra effort to make our designs truly original.'
+                        title="Lots of effort"
+                        body="We even changed some of the icons! We take the extra effort to make our designs truly original."
                     />
                     <Card
-                        title='Made with Love'
-                        body='Because nothing says hard work and talent like editing a few lines of text.'
+                        title="Made with Love"
+                        body="Because nothing says hard work and talent like editing a few lines of text."
                     />
                 </div>
             </div>
         </section>
         <div
-            class='divider-images bg-gray-200 grid grid-cols-2 lg:grid-cols-4 gap-0 min-h-[200px]'
+            class="divider-images gap-4  bg-gray-200 grid grid-cols-2 lg:grid-cols-4 min-h-[200px]"
         >
-            <ImageStrip />
-            <ImageStrip />
-            <ImageStrip />
-            <ImageStrip />
+            <ImageStrip src={image0} />
+            <ImageStrip src={image1} />
+            <ImageStrip src={image2} />
+            <ImageStrip src={image3} />
         </div>
     </main>
 </Layout>

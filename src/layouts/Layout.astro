@@ -1,35 +1,148 @@
 ---
 export interface Props {
-	title: string;
+    title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8' />
+        <meta name='viewport' content='width=device-width' />
+        <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+        <meta name='generator' content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body class=''>
+        <slot />
+    </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+    html {
+        font-family: system-ui, sans-serif;
+        background-color: #f6f6f6;
+    }
+    code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    }
+
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+    @layer utilities {
+        .text-inverse {
+            @apply text-white dark:text-black;
+        }
+        .bg-inverse {
+            @apply bg-black dark:bg-white;
+        }
+
+        .bred {
+            @apply border border-red-500;
+        }
+    }
+
+    :root {
+        --color-primary-25: #f7f5fb;
+        --color-primary-50: #fef4f2;
+        --color-primary-100: #fee7e2;
+        --color-primary-200: #fed3ca;
+        --color-primary-300: #fdb4a4;
+        --color-primary-400: #f98870;
+        --color-primary-500: #f05f40; /** Primary */
+        --color-primary-600: #dd4525;
+        --color-primary-700: #ba371b;
+        --color-primary-800: #9a311a;
+        --color-primary-900: #802e1c;
+
+        /* --color-secondary: #a08600; */
+        /* --color-bg-teritary: #a08600; */
+
+        /* Generate tints */
+        /* https://javisperez.github.io/tailwindcolorshades/?coral-red=ff4545 
+            https://uicolors.app/create
+        */
+
+        --color-gray-50: #fbfbfb;
+        --color-gray-100: #f7f7f7;
+        --color-gray-200: #e6e9ee;
+        --color-gray-300: #dde0e4;
+        --color-gray-400: #818890;
+        --color-gray-500: #535661;
+        --color-gray-600: #4b4c53;
+        --color-gray-700: #3a3d4a;
+        --color-gray-800: #2e3039;
+        --color-gray-900: #1f2028;
+
+        --color-red-50: #fdf2f2;
+        --color-red-100: #fde8e8;
+        --color-red-200: #fbd5d5;
+        --color-red-300: #f8b4b4;
+        --color-red-400: #f98080;
+        --color-red-500: #f05252;
+        --color-red-600: #e02424;
+        --color-red-700: #c81e1e;
+        --color-red-800: #9b1c1c;
+        --color-red-900: #771d1d;
+
+        --color-green-50: #f3faf7;
+        --color-green-100: #def7ec;
+        --color-green-200: #bcf0da;
+        --color-green-300: #84e1bc;
+        --color-green-400: #31c48d;
+        --color-green-500: #0e9f6e;
+        --color-green-600: #057a55;
+        --color-green-700: #046c4e;
+        --color-green-800: #03543f;
+        --color-green-900: #014737;
+
+        --color-blue-50: #ebf5ff;
+        --color-blue-100: #e1effe;
+        --color-blue-200: #c3ddfd;
+        --color-blue-300: #a4cafe;
+        --color-blue-400: #76a9fa;
+        --color-blue-500: #3f83f8;
+        --color-blue-600: #1c64f2;
+        --color-blue-700: #1a56db;
+        --color-blue-800: #1e429f;
+        --color-blue-900: #233876;
+
+        /* Base for text */
+        --color-black: #000;
+        --color-dark: #3a3d4a;
+        --color-dull: #818890;
+        --color-light: #f7f7f7;
+        --color-white: #fff;
+    }
+
+    .light {
+        --bg-primary: var(--color-white);
+        --bg-secondary: var(--color-gray-100);
+        --bg-alt: var(--color-gray-300);
+
+        --text-primary: var(--color-black);
+        --text-secondary: var(--color-dark);
+        --text-alt: var(--color-gray-100);
+
+        --border-primary: var(--color-gray-400);
+        --border-secondary: var(--color-gray-300);
+        color-scheme: light;
+    }
+
+    .dark {
+        --bg-primary: var(--color-gray-900);
+        --bg-secondary: var(--color-gray-800);
+        --bg-alt: var(--color-gray-400);
+
+        --text-primary: var(--color-white);
+        --text-secondary: var(--color-gray-300);
+        --text-alt: var(--color-gray-900);
+
+        --border-primary: var(--color-gray-400);
+        --border-secondary: var(--color-gray-500);
+        color-scheme: dark;
+    }
 </style>

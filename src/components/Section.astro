@@ -1,0 +1,32 @@
+---
+const { bg, css } = Astro.props
+
+const styles = `h-screen flex justify-center items-center bg-center bg-cover ${
+    css ? css : ''
+}`
+---
+
+<section
+    style={{
+        backgroundImage: `url("${bg}")`,
+    }}
+    class={styles}
+>
+    <slot />
+    <!-- <div class='max-w-3xl text-center flex-col flex gap-8 text-white'>
+        <h2 class='text-5xl'>
+            <span class='block'>HEY LOOK, IT'S EVERY</span>
+            <span class='block'>BOOTSTRAP WEBSITE EVER</span>
+        </h2>
+        <div class='divider border border-red-500 w-40 mx-auto'></div>
+        <p class='text-sm'>
+            Take a look around at the same fucking bootstrap page you've seen
+            ten million times before! Featuring all the same things as those
+            pages!
+        </p>
+        <button
+            class='bg-red-600 text-white font-bold w-fit mx-auto py-4 px-8 rounded-full'
+            >This button makes the page scroll</button
+        >
+    </div> -->
+</section>
